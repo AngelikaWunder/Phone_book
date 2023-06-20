@@ -17,11 +17,15 @@ def check_id():
     uid_list = [] 
     for contact in phone_book:
         uid_list.append(int(contact.get('id'))) 
-    return max(uid_list)+1
+    return {'id':max(uid_list)+1}
 
 def add_contact(new:dict):
-    # new.update(check_id())
-    phone_book.append(new)
+    # id_new = check_id()
+    # id_new.update(new)
+    # phone_book.append(id_new)
+    id_new=check_id()
+    id_new.update(new)
+    phone_book.append(id_new)
 
 def search(word: str) ->list[dict]:
     result = []

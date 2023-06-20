@@ -37,7 +37,7 @@ def start():
                 result = model.search(word)
                 console.show_contacts(result)
                 index = console.input_return(text.input_index)
-                new = console.input_changed_contact(text.input_change_contact)
+                new = console.input_contact(text.input_change_contact)
                 model.change(int(index), new)
                 old_name = model.phone_book[int(index)-1].get('name')
                 console.print_message(text.contact_changed(new.get('name') if new.get('name') else old_name))              

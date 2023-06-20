@@ -35,16 +35,16 @@ def input_contact(message: str) -> dict[str, str]:
     name = input(text.new_contact[0])
     phone = input(text.new_contact[1])  
     comment = input(text.new_contact[2])
-    index = model.check_id()
-    index = str(index)
-    return {'id': index, 'name': name, 'phone':phone, 'comment': comment}
-
-def input_changed_contact(message: str) -> dict[str, str]:
-    print(message)
-    name = input(text.new_contact[0])
-    phone = input(text.new_contact[1])  
-    comment = input(text.new_contact[2])
+    # index = model.check_id()
+    # index = str(index)
     return {'name': name, 'phone':phone, 'comment': comment}
+
+# def input_changed_contact(message: str) -> dict[str, str]:
+#     print(message)
+#     name = input(text.new_contact[0])
+#     phone = input(text.new_contact[1])  
+#     comment = input(text.new_contact[2])
+#     return {'name': name, 'phone':phone, 'comment': comment}
   
 def input_return (message: str) ->str:
     return input(message)
